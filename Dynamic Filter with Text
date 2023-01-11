@@ -1,0 +1,27 @@
+//These measures will retrieve a concatenated string with all my filter selections (with a delimiter that I chose, in this case it was a comma “,”)
+
+        //*If this was a DIM table (basically a table just for the geo info where the countries were all distinct values) 
+        you wouldn’t need to use the DISTINCT function in this measure.
+
+concatenatex_Filter1 = calculate(
+                               CONCATENATEX(
+                                            DISTINCT(Table[Column]), 
+                                            Table[Column], ", "
+                                            )
+                                )
+
+concatenatex_Filter2 = calculate(
+                               CONCATENATEX(
+                                            DISTINCT(Table[Column]), 
+                                            Table[Column], ", "
+                                            )
+                                )
+                                
+concatenatex_Filter3 = calculate(
+                               CONCATENATEX(
+                                            DISTINCT(Table[Column]), 
+                                            Table[Column], ", "
+                                            )
+                                )
+                                
+//Step 2 - Add measures to our text box or matrix to show our filters
